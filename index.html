@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>receipt maker</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css"/>
+  <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #961212, #751c1c);
+      min-height: 100vh;
+      font-family: monospace
+    }
+
+    .container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .main-card {
+      border: none;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .header {
+      background: #212529;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .info-card {
+      border: none;
+      border-radius: 15px;
+      height: 100%;
+      transition: transform 0.2s;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .info-title {
+      color: #cf1a1a;
+      font-weight: bold;
+    }
+
+    .data-value {
+      font-size: 1.1rem;
+    }
+
+    .badge-custom {
+      background-color: #c91414;
+    }
+
+    footer {
+      text-align: center;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+
+</head>
+
+
+<body>  
+  <script type="py" src="main.py"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <div class="container">
+
+    <div class="card main-card">
+      <div class="header">
+        <h1>RUBIAN COFFEE</h1>
+
+        <p class="mb-0">High quality, tasty coffee served from 10-Ruby</p>
+      </div>
+
+
+      <div class="card-body p-4">
+        <div class="row g-4">
+
+          <!-- Menu Checkboxes -->
+          <form id="order-form">
+            <label><input type="checkbox" name="menu_item" value="100" id="item1"> Americano</label><br>
+            <label><input type="checkbox" name="menu_item" value="175" id="item2"> Spanish Latte</label><br>
+            <label><input type="checkbox" name="menu_item" value="200" id="item3"> Cold Brew Malt</label><br>
+            <label><input type="checkbox" name="menu_item" value="270" id="item4"> Affogato</label><br>
+            <label><input type="checkbox" name="menu_item" value="175" id="item5"> Caramel Macchiato</label><br>
+          </form>
+
+          <button py-click="create_order">Create order</button>
+
+          <p id="show">Test</p>
+
+          <a href="sku.html">Go to SKU Generator</a>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html
